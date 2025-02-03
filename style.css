@@ -1,12 +1,15 @@
 /* Fundo bonito cobrindo toda a tela com transparência */
 body {
-    background: url(./img/fundo.jpg) no-repeat center center fixed;
+    background: url("https://img.freepik.com/vetores-gratis/particula-de-tecnologia-abstrata-realista-de-fundo_23-2148431735.jpg") no-repeat center center fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     margin: 0;
     padding: 0;
+    min-height: 100vh; /* Garante que a página ocupe toda a altura */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Criando uma camada semi-transparente sobre o fundo */
@@ -39,10 +42,7 @@ body::before {
     padding: 20px;
     border-radius: 10px;
     width: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
@@ -77,12 +77,12 @@ button:hover {
 
 /* Container geral para os elementos no canto inferior */
 .canto-inferior {
-    position: fixed;
-    bottom: 10px;
+    position: relative;
+    bottom: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
+    padding: 10px;
 }
 
 /* Histórico no canto inferior esquerdo */
@@ -115,23 +115,4 @@ button:hover {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-}
-
-/* Modo escuro */
-.dark-mode {
-    background: #222;
-    color: #fff;
-}
-
-.dark-mode .container {
-    background: rgba(255, 255, 255, 0.2);
-}
-
-.dark-mode button {
-    background: #444;
-    color: white;
-}
-
-.dark-mode button:hover {
-    background: #666;
 }
